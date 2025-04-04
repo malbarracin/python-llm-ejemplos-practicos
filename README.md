@@ -75,6 +75,76 @@ Descubre cómo usar Langchain para integrar y orquestar modelos de lenguaje de f
 
 ¡Ahora tienes una guía práctica completa para dominar los fundamentos esenciales sobre LLM con Python!
 
+## 🛠️ Configuración del Proyecto
+
+### Archivo .env
+
+El proyecto soporta múltiples proveedores de LLM. Configura el archivo `.env` según el proveedor que desees usar:
+
+```env
+# Selecciona el proveedor (azure, ollama, github, openai)
+API_HOST=github
+
+# Configuración para Azure OpenAI
+AZURE_OPENAI_ENDPOINT=https://YOUR-AZURE-OPENAI-SERVICE-NAME.openai.azure.com
+AZURE_OPENAI_DEPLOYMENT=YOUR-AZURE-DEPLOYMENT-NAME
+AZURE_OPENAI_VERSION=2024-03-01-preview
+
+# Configuración para Ollama
+OLLAMA_ENDPOINT=http://localhost:11434/v1
+OLLAMA_MODEL=llama2
+
+# Configuración para OpenAI
+OPENAI_KEY=YOUR-OPENAI-KEY
+OPENAI_MODEL=gpt-3.5-turbo
+
+# Configuración para GitHub Copilot
+GITHUB_TOKEN=YOUR-GITHUB-TOKEN
+GITHUB_MODEL=gpt-4o
+```
+
+### Proveedores Soportados
+
+1. **Azure OpenAI**
+   - Requiere una cuenta de Azure
+   - Necesita configurar un recurso de Azure OpenAI
+   - Mayor control y seguridad empresarial
+
+2. **Ollama**
+   - Opción gratuita y local
+   - No requiere conexión a internet
+   - Ideal para desarrollo y pruebas
+
+3. **OpenAI**
+   - API oficial de OpenAI
+   - Requiere una cuenta y API key
+   - Acceso a los últimos modelos
+
+4. **GitHub Copilot**
+   - Usa los modelos a través de GitHub
+   - Requiere una cuenta de GitHub con acceso a Copilot
+   - Buena opción para desarrollo
+
+### Instalación
+
+1. Clona el repositorio
+2. Crea un archivo `.env` basado en el ejemplo anterior
+3. Instala las dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Uso
+
+1. Configura el proveedor deseado en `.env` usando `API_HOST`
+2. Asegúrate de tener las credenciales correctas para el proveedor seleccionado
+3. Ejecuta cualquiera de los ejemplos:
+   ```bash
+   python ejemplos/uso_openai_chat.py
+   ```
+
+---
+
 ## Author
 Marcelo Alejandro Albarracín
 marceloalejandro.albarracin@gmail.com

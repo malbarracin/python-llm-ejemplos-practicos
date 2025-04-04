@@ -1,5 +1,7 @@
 tiktoken
 openai
 python-dotenv
+azure-identity
 langchain
 langchain-openai
+azure-identity
